@@ -2,12 +2,15 @@ import pg from 'pg';
 
 
 export const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "blog",
+   user: "postgres",
+   host: "localhost",
+ database: "blog",
     password: "Ayushi@12344",
     port: 5432,
 });
+//export const db = new pg.Client({
+  //  connectionString: process.env.POSTGRES_URL,
+  //})
 
 db.connect(err => {
     if (err) {
